@@ -2,91 +2,91 @@
   {
     "section": "The Igbo Worldview (Ụwa)",
     "name": "Ụwa",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Bronze_ornamental_staff_head%2C_9th_century%2C_Igbo-Ukwu.JPG/500px-Bronze_ornamental_staff_head%2C_9th_century%2C_Igbo-Ukwu.JPG",
+    "image": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/images/igbo.jpg",
     "audio": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/pronunciations/pronunciation_ig_uwa.mp3",
     "description": "The Igbo universe is divided into the physical world (Ụwa mmadu), the spirit world (Ụwa mmụọ), and the world of the ancestors (Ala mmụọ). These realms are interconnected, and life is seen as a cycle between them."
   },
   {
     "section": "The Igbo Worldview (Ụwa)",
     "name": "Ụwa mmadu",
-    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Bronze_ornamental_staff_head%2C_9th_century%2C_Igbo-Ukwu.JPG/500px-Bronze_ornamental_staff_head%2C_9th_century%2C_Igbo-Ukwu.JPG",
+    "image": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/images/igbo.jpg",
     "audio": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/pronunciations/pronunciation_ig_uwa.mp3",
     "description": "The physical world where humans live, work, and interact. It is influenced by spiritual forces and ancestral guidance."
   },
   {
     "section": "The Igbo Worldview (Ụwa)",
     "name": "Ụwa mmụọ",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/images/igbo.jpg",
     "audio": "",
     "description": "The spirit world, inhabited by deities, spirits, and ancestors. It is believed to influence events in the physical world."
   },
   {
     "section": "Chukwu and Deities",
     "name": "Chukwu",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/images/igbo.jpg",
     "audio": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/pronunciations/pronunciation_ig_chukwu.mp3",
     "description": "Chukwu is the supreme being, the creator of the universe, and the source of all life and power. All other deities (Alusi) derive their authority from Chukwu."
   },
   {
     "section": "Chukwu and Deities",
     "name": "Amadioha",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/images/amadioha.jpg",
     "audio": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/pronunciations/pronunciation_ig_amadioha.mp3",
     "description": "Amadioha is the god of thunder, lightning, and justice. He is often invoked for truth and fairness."
   },
   {
     "section": "Chukwu and Deities",
     "name": "Ani",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/images/igbo.jpg",
     "audio": "",
     "description": "Ani is the earth goddess, guardian of morality, fertility, and the underworld. She is highly revered in Igbo society."
   },
   {
     "section": "Chukwu and Deities",
     "name": "Ikenga",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/images/ikenga.jpg",
     "audio": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/pronunciations/pronunciation_ig_ikenga.mp3",
     "description": "Ikenga is the horned god of achievement, strength, and personal success. Represented by a carved figure, Ikenga is kept by individuals seeking progress."
   },
   {
     "section": "Karma and Reincarnation (Ịlọ Ụwa)",
     "name": "Ịlọ Ụwa",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/images/igbo.jpg",
     "audio": "",
     "description": "Reincarnation is the belief that the soul returns to the world in a new body after death. Ancestors are often reborn within the family lineage."
   },
   {
     "section": "Karma and Reincarnation (Ịlọ Ụwa)",
     "name": "Chi",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/images/igbo.jpg",
     "audio": "",
     "description": "Chi is a personal spirit or guardian assigned to each individual by Chukwu. It determines one's destiny and guides their life path."
   },
   {
     "section": "Karma and Reincarnation (Ịlọ Ụwa)",
     "name": "Akala Aka",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/images/igbo.jpg",
     "audio": "",
     "description": "Akala Aka refers to destiny or fate, believed to be written on one's palm before birth. It is shaped by one's Chi and actions."
   },
   {
     "section": "Sacred Symbols & Objects",
     "name": "Ofo",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/images/ofo.jpg",
     "audio": "",
     "description": "Ofo is a sacred staff symbolizing truth, authority, and ancestral connection. It is used in rituals and decision-making."
   },
   {
     "section": "Sacred Symbols & Objects",
     "name": "Ikenga (Object)",
-    "image": "",
-    "audio": "",
+    "image": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/images/ikenga.jpg",
+    "audio": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/pronunciations/pronunciation_ig_ikenga.mp3",
     "description": "A carved wooden figure representing personal achievement and success. It is kept in homes and shrines."
   },
   {
     "section": "Sacred Symbols & Objects",
     "name": "Nsibidi",
-    "image": "",
+    "image": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/images/igbo.jpg",
     "audio": "",
     "description": "Nsibidi is an ancient system of symbols used for writing, communication, and ritual. It conveys deep meanings and is still used in some communities."
   }
