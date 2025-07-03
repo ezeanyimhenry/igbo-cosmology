@@ -3,14 +3,14 @@
     "section": "The Igbo Worldview (Ụwa)",
     "name": "Ụwa",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Bronze_ornamental_staff_head%2C_9th_century%2C_Igbo-Ukwu.JPG/500px-Bronze_ornamental_staff_head%2C_9th_century%2C_Igbo-Ukwu.JPG",
-    "audio": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/assets/pronunciations/pronunciation_ig_uwa.mp3",
+    "audio": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/pronunciations/pronunciation_ig_uwa.mp3",
     "description": "The Igbo universe is divided into the physical world (Ụwa mmadu), the spirit world (Ụwa mmụọ), and the world of the ancestors (Ala mmụọ). These realms are interconnected, and life is seen as a cycle between them."
   },
   {
     "section": "The Igbo Worldview (Ụwa)",
     "name": "Ụwa mmadu",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Bronze_ornamental_staff_head%2C_9th_century%2C_Igbo-Ukwu.JPG/500px-Bronze_ornamental_staff_head%2C_9th_century%2C_Igbo-Ukwu.JPG",
-    "audio": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/assets/pronunciations/pronunciation_ig_uwa.mp3",
+    "audio": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/pronunciations/pronunciation_ig_uwa.mp3",
     "description": "The physical world where humans live, work, and interact. It is influenced by spiritual forces and ancestral guidance."
   },
   {
@@ -24,14 +24,14 @@
     "section": "Chukwu and Deities",
     "name": "Chukwu",
     "image": "",
-    "audio": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/assets/pronunciations/pronunciation_ig_chukwu.mp3",
+    "audio": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/pronunciations/pronunciation_ig_chukwu.mp3",
     "description": "Chukwu is the supreme being, the creator of the universe, and the source of all life and power. All other deities (Alusi) derive their authority from Chukwu."
   },
   {
     "section": "Chukwu and Deities",
     "name": "Amadioha",
     "image": "",
-    "audio": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/assets/pronunciations/pronunciation_ig_amadioha.mp3",
+    "audio": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/pronunciations/pronunciation_ig_amadioha.mp3",
     "description": "Amadioha is the god of thunder, lightning, and justice. He is often invoked for truth and fairness."
   },
   {
@@ -45,7 +45,7 @@
     "section": "Chukwu and Deities",
     "name": "Ikenga",
     "image": "",
-    "audio": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/assets/pronunciations/pronunciation_ig_ikenga.mp3",
+    "audio": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/pronunciations/pronunciation_ig_ikenga.mp3",
     "description": "Ikenga is the horned god of achievement, strength, and personal success. Represented by a carved figure, Ikenga is kept by individuals seeking progress."
   },
   {
