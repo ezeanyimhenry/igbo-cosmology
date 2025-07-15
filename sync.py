@@ -41,40 +41,45 @@ def download_file(url, path):
 
 # === LOAD SHEET AND JSON ===
 df = pd.read_csv(CSV_URL).fillna("")
-print("📋 CSV Columns:", df.columns.tolist())  # Debug: show column names
 
-with open(JSON_FILE, "r", encoding="utf-8") as f:
-    existing_data = json.load(f)
+# Load existing JSON data
+try:
+    with open(JSON_FILE, "r", encoding="utf-8") as f:
+        existing_data = json.load(f)
+except FileNotFoundError:
+    existing_data = []
 
-existing_keys = {(item["Section"], item["Name"]) for item in existing_data}
+# Create set of existing keys using the correct column names
+existing_keys = {(item["section"], item["name"]) for item in existing_data}
 new_entries = []
 
 # === PROCESS NEW ENTRIES ===
 for _, row in df.iterrows():
+    # Use correct column names with capital letters
     key = (row["Section"], row["Name"])
     if key in existing_keys:
         continue
-
+    
     slug = slugify(row["Name"])
-
+    
     # === AUDIO ===
     audio_url = convert_google_drive_url(row["Audio"])
     audio_filename = f"pronunciation_ig_{slug}.mp3"
     audio_path = os.path.join(AUDIO_DIR, audio_filename)
     audio_github_url = f"https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/{AUDIO_DIR}/{audio_filename}"
-
+    
     # === IMAGE ===
     image_url = convert_google_drive_url(row["Image"])
     image_filename = f"{slug}.jpg"
     image_path = os.path.join(IMAGE_DIR, image_filename)
     image_github_url = f"https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/{IMAGE_DIR}/{image_filename}"
-
+    
     # === DOWNLOAD FILES ===
     if row["Audio"]:
         download_file(audio_url, audio_path)
     if row["Image"]:
         download_file(image_url, image_path)
-
+    
     # === ADD NEW ENTRY ===
     new_entries.append({
         "section": row["Section"],
