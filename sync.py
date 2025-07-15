@@ -4,14 +4,17 @@ import os
 import requests
 from slugify import slugify
 
+# === CONFIGURATION ===
 CSV_URL = "https://docs.google.com/spreadsheets/d/e/2PACX-1vS6DwoZGGGSoNgv4N3CccevntUCCHhaYNWR4MyQi_GlgfqRTTwgcSGgtNeIh-PmiKLLhKzY2dc-4-mE/pub?output=csv"
 JSON_FILE = "igbo_cosmology.json"
 AUDIO_DIR = "assets/pronunciations"
 IMAGE_DIR = "assets/images"
 
+# === CREATE FOLDERS IF THEY DON'T EXIST ===
 os.makedirs(AUDIO_DIR, exist_ok=True)
 os.makedirs(IMAGE_DIR, exist_ok=True)
 
+# === UTILS ===
 def convert_google_drive_url(url):
     if "drive.google.com" in url and "/d/" in url:
         try:
@@ -19,7 +22,7 @@ def convert_google_drive_url(url):
             return f"https://drive.google.com/uc?export=download&id={file_id}"
         except Exception:
             return ""
-    return url  # Return original if it's not a Drive link
+    return url  # Not a Drive link
 
 def download_file(url, path):
     try:
@@ -27,24 +30,26 @@ def download_file(url, path):
         if response.status_code == 200:
             with open(path, "wb") as f:
                 f.write(response.content)
-            print(f"Downloaded: {path}")
+            print(f"✅ Downloaded: {path}")
             return True
         else:
-            print(f"Failed to download {path}: HTTP {response.status_code}")
+            print(f"❌ Failed to download {path}: HTTP {response.status_code}")
             return False
     except Exception as e:
-        print(f"Error downloading {path}: {e}")
+        print(f"❌ Error downloading {path}: {e}")
         return False
 
-# Load Google Sheet and JSON
+# === LOAD SHEET AND JSON ===
 df = pd.read_csv(CSV_URL).fillna("")
-df.columns = df.columns.str.strip().str.lower()
+df.columns = df.columns.str.strip().str.lower()  # normalize headers
+
 with open(JSON_FILE, "r", encoding="utf-8") as f:
     existing_data = json.load(f)
 
 existing_keys = {(item["section"], item["name"]) for item in existing_data}
 new_entries = []
 
+# === PROCESS NEW ENTRIES ===
 for _, row in df.iterrows():
     key = (row["section"], row["name"])
     if key in existing_keys:
@@ -52,25 +57,25 @@ for _, row in df.iterrows():
 
     slug = slugify(row["name"])
 
-    # Handle audio
+    # === AUDIO ===
     audio_url = convert_google_drive_url(row["audio"])
     audio_filename = f"pronunciation_ig_{slug}.mp3"
     audio_path = os.path.join(AUDIO_DIR, audio_filename)
     audio_github_url = f"https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/{AUDIO_DIR}/{audio_filename}"
 
-    # Handle image
+    # === IMAGE ===
     image_url = convert_google_drive_url(row["image"])
     image_filename = f"{slug}.jpg"
     image_path = os.path.join(IMAGE_DIR, image_filename)
     image_github_url = f"https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/{IMAGE_DIR}/{image_filename}"
 
-    # Download files
+    # === DOWNLOAD FILES ===
     if row["audio"]:
         download_file(audio_url, audio_path)
     if row["image"]:
         download_file(image_url, image_path)
 
-    # Build entry
+    # === ADD NEW ENTRY ===
     new_entries.append({
         "section": row["section"],
         "name": row["name"],
@@ -79,10 +84,10 @@ for _, row in df.iterrows():
         "description": row["description"]
     })
 
-# Append and write to JSON
+# === SAVE UPDATED JSON ===
 if new_entries:
     with open(JSON_FILE, "w", encoding="utf-8") as f:
         json.dump(existing_data + new_entries, f, ensure_ascii=False, indent=2)
-    print(f"Added {len(new_entries)} new entries.")
+    print(f"✅ Added {len(new_entries)} new entries to {JSON_FILE}.")
 else:
-    print("No new entries to add.")
+    print("ℹ️ No new entries to add.")
