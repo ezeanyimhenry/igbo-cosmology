@@ -103,5 +103,12 @@
     "image": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/images/here.jpg",
     "audio": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/pronunciations/pronunciation_ig_here.mp3",
     "description": "here is test"
+  },
+  {
+    "section": "test",
+    "name": "new test",
+    "image": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/images/new-test.jpg",
+    "audio": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/pronunciations/pronunciation_ig_new-test.mp3",
+    "description": "hey i am testing"
   }
 ]
