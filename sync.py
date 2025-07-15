@@ -41,6 +41,7 @@ def download_file(url, path):
 
 # === LOAD SHEET AND JSON ===
 df = pd.read_csv(CSV_URL).fillna("")
+print("📋 CSV Columns:", df.columns.tolist())  # Debug: show column names
 
 with open(JSON_FILE, "r", encoding="utf-8") as f:
     existing_data = json.load(f)
