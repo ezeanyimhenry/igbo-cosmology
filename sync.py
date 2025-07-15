@@ -50,7 +50,7 @@ new_entries = []
 
 # === PROCESS NEW ENTRIES ===
 for _, row in df.iterrows():
-    key = (row["section"], row["Name"])
+    key = (row["Section"], row["Name"])
     if key in existing_keys:
         continue
 
