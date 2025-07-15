@@ -89,5 +89,12 @@
     "image": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/images/igbo.jpg",
     "audio": "",
     "description": "Nsibidi is an ancient system of symbols used for writing, communication, and ritual. It conveys deep meanings and is still used in some communities."
+  },
+  {
+    "section": "test",
+    "name": "new test",
+    "image": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/images/new-test.jpg",
+    "audio": "https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/assets/pronunciations/pronunciation_ig_new-test.mp3",
+    "description": "hey i am testing"
   }
 ]
