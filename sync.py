@@ -45,33 +45,33 @@ df = pd.read_csv(CSV_URL).fillna("")
 with open(JSON_FILE, "r", encoding="utf-8") as f:
     existing_data = json.load(f)
 
-existing_keys = {(item["section"], item["name"]) for item in existing_data}
+existing_keys = {(item["Section"], item["Name"]) for item in existing_data}
 new_entries = []
 
 # === PROCESS NEW ENTRIES ===
 for _, row in df.iterrows():
-    key = (row["section"], row["name"])
+    key = (row["section"], row["Name"])
     if key in existing_keys:
         continue
 
-    slug = slugify(row["name"])
+    slug = slugify(row["Name"])
 
     # === AUDIO ===
-    audio_url = convert_google_drive_url(row["audio"])
+    audio_url = convert_google_drive_url(row["Audio"])
     audio_filename = f"pronunciation_ig_{slug}.mp3"
     audio_path = os.path.join(AUDIO_DIR, audio_filename)
     audio_github_url = f"https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/{AUDIO_DIR}/{audio_filename}"
 
     # === IMAGE ===
-    image_url = convert_google_drive_url(row["image"])
+    image_url = convert_google_drive_url(row["Image"])
     image_filename = f"{slug}.jpg"
     image_path = os.path.join(IMAGE_DIR, image_filename)
     image_github_url = f"https://raw.githubusercontent.com/ezeanyimhenry/igbo-cosmology/main/{IMAGE_DIR}/{image_filename}"
 
     # === DOWNLOAD FILES ===
-    if row["audio"]:
+    if row["Audio"]:
         download_file(audio_url, audio_path)
-    if row["image"]:
+    if row["Image"]:
         download_file(image_url, image_path)
 
     # === ADD NEW ENTRY ===
