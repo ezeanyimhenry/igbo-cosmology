@@ -41,7 +41,6 @@ def download_file(url, path):
 
 # === LOAD SHEET AND JSON ===
 df = pd.read_csv(CSV_URL).fillna("")
-df.columns = df.columns.str.strip().str.lower()  # normalize headers
 
 with open(JSON_FILE, "r", encoding="utf-8") as f:
     existing_data = json.load(f)
@@ -77,11 +76,11 @@ for _, row in df.iterrows():
 
     # === ADD NEW ENTRY ===
     new_entries.append({
-        "section": row["section"],
-        "name": row["name"],
-        "image": image_github_url if row["image"] else "",
-        "audio": audio_github_url if row["audio"] else "",
-        "description": row["description"]
+        "section": row["Section"],
+        "name": row["Name"],
+        "image": image_github_url if row["Image"] else "",
+        "audio": audio_github_url if row["Audio"] else "",
+        "description": row["Description"]
     })
 
 # === SAVE UPDATED JSON ===
