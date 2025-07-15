@@ -38,6 +38,7 @@ def download_file(url, path):
 
 # Load Google Sheet and JSON
 df = pd.read_csv(CSV_URL).fillna("")
+df.columns = df.columns.str.strip().str.lower()
 with open(JSON_FILE, "r", encoding="utf-8") as f:
     existing_data = json.load(f)
 
