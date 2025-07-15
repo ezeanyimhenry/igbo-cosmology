@@ -16,24 +16,31 @@ os.makedirs(IMAGE_DIR, exist_ok=True)
 
 # === UTILS ===
 def convert_google_drive_url(url):
-    if "drive.google.com" in url and "/d/" in url:
-        try:
-            file_id = url.split("/d/")[1].split("/")[0]
+    if "drive.google.com" in url:
+        if "/d/" in url:
+            try:
+                file_id = url.split("/d/")[1].split("/")[0]
+                return f"https://drive.google.com/uc?export=download&id={file_id}"
+            except Exception:
+                return ""
+        elif "id=" in url:
+            file_id = url.split("id=")[-1]
             return f"https://drive.google.com/uc?export=download&id={file_id}"
-        except Exception:
-            return ""
-    return url  # Not a Drive link
+    return url  # Return original if it's not a recognized Drive link
 
 def download_file(url, path):
     try:
-        response = requests.get(url)
-        if response.status_code == 200:
+        response = requests.get(url, stream=True)
+        content_type = response.headers.get('Content-Type', '')
+
+        if response.status_code == 200 and 'text/html' not in content_type:
             with open(path, "wb") as f:
-                f.write(response.content)
+                for chunk in response.iter_content(chunk_size=8192):
+                    f.write(chunk)
             print(f"✅ Downloaded: {path}")
             return True
         else:
-            print(f"❌ Failed to download {path}: HTTP {response.status_code}")
+            print(f"❌ Invalid content at {url} — Content-Type: {content_type}")
             return False
     except Exception as e:
         print(f"❌ Error downloading {path}: {e}")
@@ -55,7 +62,6 @@ new_entries = []
 
 # === PROCESS NEW ENTRIES ===
 for _, row in df.iterrows():
-    # Use correct column names with capital letters
     key = (row["Section"], row["Name"])
     if key in existing_keys:
         continue
